@@ -45,7 +45,7 @@ public class JavaApplication50 {
         System.out.println("المعرف: " + ids[maxIndex]);
         System.out.println("الاسم: " + names[maxIndex]);
         
-        scanner.close();
+      
     }
 }
 
