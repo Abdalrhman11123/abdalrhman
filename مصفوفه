@@ -1,0 +1,57 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication50;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author الشباب
+ */
+public class JavaApplication50 {
+
+    
+    public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+        
+        int[] ids = new int[10];
+        String[] names = new String[10];
+        double[] salaries = new double[10];
+        
+        for (int i = 0; i < 10; i++) {
+            System.out.println("ادخل بيانات الموظف رقم " + (i + 1));
+            System.out.print("رقم الموظف :");
+            ids[i] = scanner.nextInt();
+            scanner.nextLine(); 
+            
+            System.out.print("الاسم: ");
+            names[i] = scanner.nextLine();
+            
+            System.out.print("الراتب: ");
+            salaries[i] = scanner.nextDouble();
+        }
+        
+        int maxIndex = 0;
+        for (int i = 1; i < 10; i++) {
+            if (salaries[i] > salaries[maxIndex]) {
+                maxIndex = i;
+            }
+        }
+        
+        System.out.println("\nالموظف الحاصل على أعلى راتب:");
+        System.out.println("المعرف: " + ids[maxIndex]);
+        System.out.println("الاسم: " + names[maxIndex]);
+        
+        scanner.close();
+    }
+}
+
+    
+
+
+    
+    
+
